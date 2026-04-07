@@ -1719,7 +1719,10 @@ export class GeoJSONOverlay extends ImageOverlay {
  * @param {string} [options.format] Image MIME type, e.g. `'image/png'`.
  * @param {number} [options.tileDimension=256] Tile pixel size.
  * @param {string} [options.styles] WMS styles parameter.
- * @param {string} [options.version] WMS version string, e.g. `'1.3.0'`.
+ * @param {string} [options.version='1.3.0'] WMS version string.
+ * @param {boolean} [options.transparent=false] Whether to request a transparent image.
+ * @param {number} [options.levels=18] Number of zoom levels.
+ * @param {number[]|null} [options.contentBoundingBox=null] Content bounding box in radians `[west, south, east, north]`. If null, uses full projection bounds.
  * @param {number} [options.opacity=1] Overlay opacity (0–1).
  * @param {number|Color} [options.color=0xffffff] Tint color.
  * @param {Matrix4} [options.frame=null] Planar projection frame. If null, cartographic projection is used.

@@ -130,9 +130,12 @@ export class WMTSTilesPlugin extends EllipsoidProjectionTilesPlugin {
  * @param {string} [options.layer] WMS layer name.
  * @param {string} [options.crs] Coordinate reference system, e.g. `'EPSG:4326'`.
  * @param {string} [options.format] Image MIME type, e.g. `'image/png'`.
- * @param {number} [options.tileDimension] Tile pixel size (defaults to 256).
+ * @param {number} [options.tileDimension=256] Tile pixel size.
  * @param {string} [options.styles] WMS styles parameter.
- * @param {string} [options.version] WMS version string, e.g. `'1.3.0'`.
+ * @param {string} [options.version='1.3.0'] WMS version string.
+ * @param {boolean} [options.transparent=false] Whether to request a transparent image.
+ * @param {number} [options.levels=18] Number of zoom levels.
+ * @param {number[]|null} [options.contentBoundingBox=null] Content bounding box in radians `[west, south, east, north]`. If null, uses full projection bounds.
  */
 export class WMSTilesPlugin extends EllipsoidProjectionTilesPlugin {
 
@@ -146,6 +149,9 @@ export class WMSTilesPlugin extends EllipsoidProjectionTilesPlugin {
 			tileDimension,
 			styles,
 			version,
+			transparent,
+			levels,
+			contentBoundingBox,
 			...rest
 		} = options;
 
@@ -159,7 +165,10 @@ export class WMSTilesPlugin extends EllipsoidProjectionTilesPlugin {
 			format,
 			tileDimension,
 			styles,
-			version
+			version,
+			transparent,
+			levels,
+			contentBoundingBox,
 		} );
 
 	}

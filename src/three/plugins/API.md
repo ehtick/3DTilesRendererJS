@@ -262,7 +262,10 @@ constructor(
 		format?: string,
 		tileDimension = 256: number,
 		styles?: string,
-		version?: string,
+		version = '1.3.0': string,
+		transparent = false: boolean,
+		levels = 18: number,
+		contentBoundingBox = null: Array<number> | null,
 		opacity = 1: number,
 		color = 0xffffff: number | Color,
 		frame = null: Matrix4,
@@ -483,9 +486,12 @@ constructor(
 		layer?: string,
 		crs?: string,
 		format?: string,
-		tileDimension?: number,
+		tileDimension = 256: number,
 		styles?: string,
-		version?: string,
+		version = '1.3.0': string,
+		transparent = false: boolean,
+		levels = 18: number,
+		contentBoundingBox = null: Array<number> | null,
 	}
 )
 ```
