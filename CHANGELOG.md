@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - ImageOverlayPlugin: Do not allocate a render target for compositing if only a single tile is returned that exactly matches the tile bounds.
 - WMTSImageOverlay, WMTSTilesPlugin: Deprecated "capabilities" argument, adjusted options so literals can be passed.
 - Changed "three/examples/jsm" paths to "three/addons"
+- ImageOverlayPlugin: Image overlay tile levels are now determined using image resolution rather than depth.
 
 ### Fixed
 - Ellipsoid.getPositionToCartographic: fixed incorrect calculation of cartographic point.
