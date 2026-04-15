@@ -253,8 +253,6 @@ function appendStructuralMetadata( structuralMetadata, triangle, barycoord, inde
 	// function for writing rows
 	function appendRows( data, info ) {
 
-		console.log( data, info )
-
 		const maxPropertyName = Math.max( ...Object.values( data ).flatMap( v => Object.keys( v ) ).map( n => n.length ) );
 		for ( const i in data ) {
 
