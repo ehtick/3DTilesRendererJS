@@ -179,8 +179,8 @@ function reinstantiateTiles() {
 	localStorage.setItem( 'ionApiKey', params.accessToken );
 
 	// create tileset
-	tiles = new TilesRenderer( 'https://raw.githubusercontent.com/bertt/cesium_3dtiles_samples/refs/heads/master/samples/1.1/all_types/tileset.json' );
-	// tiles.registerPlugin( new CesiumIonAuthPlugin( { apiToken: params.accessToken, assetId: params.assetId } ) );
+	tiles = new TilesRenderer();
+	tiles.registerPlugin( new CesiumIonAuthPlugin( { apiToken: params.accessToken, assetId: params.assetId } ) );
 	tiles.registerPlugin( new ImplicitTilingPlugin() );
 	tiles.registerPlugin( new GLTFExtensionsPlugin( { metadata: true } ) );
 
